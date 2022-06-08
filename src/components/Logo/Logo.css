@@ -1,0 +1,16 @@
+.Logo {
+  width: 20%;
+  padding-top: 0px;
+  padding-left: 40px;
+}
+
+.Tilt {
+  height: 150px;
+  width: 150px;
+  margin: 0 auto;
+  background: linear-gradient(89deg, #c982f2 0%, #fbb1d9 100%);
+}
+
+img {
+  padding: 30px;
+}
