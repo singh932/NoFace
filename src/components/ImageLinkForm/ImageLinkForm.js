@@ -10,7 +10,7 @@ const ImageLinkForm = () => {
       <div className="center">
         <div className="form pa4 shadow-5">
           <input className="f4 pa2 w-70" type="text" />
-          <button className="f4 pa2 w-30 grow link dim ph3 pv2 dib white bg-light-pink">
+          <button className="f4 pa2 w-30 grow link dim ph3 pv2 dib white">
             Detect
           </button>
         </div>

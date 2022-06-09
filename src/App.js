@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import Navigation from "./components/Navigation/Navigation";
@@ -74,25 +75,27 @@ const particlesOptions = {
   detectRetina: true,
 };
 
-function App() {
-  const particlesInit = async (main) => await loadFull(main);
-  const particlesLoaded = (container) => "";
+const particlesInit = async (main) => await loadFull(main);
+const particlesLoaded = (container) => "";
 
-  return (
-    <div className="App">
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={particlesOptions}
-      />
-      <Navigation />
-      <Logo />
-      <Rank />
-      <ImageLinkForm />
-      {/* <FaceRecognition /> */}
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={particlesOptions}
+        />
+        <Navigation />
+        <Logo />
+        <Rank />
+        <ImageLinkForm />
+        {/* <FaceRecognition /> */}
+      </div>
+    );
+  }
 }
 
 export default App;
