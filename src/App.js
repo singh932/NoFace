@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import Clarifai from "clarifai";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Navigation from "./components/Navigation/Navigation";
 import SignIn from "./components/SignIn/SignIn";
@@ -11,13 +10,9 @@ import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
 import Rank from "./components/Rank/Rank";
 import "./App.css";
 
-window.process = {
-  ...window.process,
-};
-
-const app = new Clarifai.App({
-  apiKey: "4558654d0fc64b7499eaf0c94d8f1032",
-});
+// window.process = {
+//   ...window.process,
+// };
 
 const particlesInit = async (main) => await loadFull(main);
 const particlesLoaded = (container) => "";
@@ -161,8 +156,14 @@ class App extends Component {
   // Method 1: Using older way of fetching data from Clarifai API
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
-    app.models
-      .predict("a403429f2ddf4b49b307e318f00e528b", this.state.input)
+    fetch("http://localhost:3000/imageurl", {
+      method: "post",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        input: this.state.input,
+      }),
+    })
+      .then((response) => response.json())
       .then((response) => {
         if (response) {
           fetch("http://localhost:3000/image", {
