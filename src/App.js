@@ -157,7 +157,6 @@ class App extends Component {
   onButtonSubmit = () => {
     this.setState({ imageUrl: this.state.input });
     fetch("https://agile-ridge-97933.herokuapp.com/imageurl", {
-      mode: "no-cors",
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -168,7 +167,6 @@ class App extends Component {
       .then((response) => {
         if (response) {
           fetch("https://agile-ridge-97933.herokuapp.com:3000/image", {
-            mode: "no-cors",
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({

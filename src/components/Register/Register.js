@@ -24,7 +24,6 @@ class Register extends Component {
 
   onSubmitSignIn = () => {
     fetch("https://agile-ridge-97933.herokuapp.com/register", {
-      mode: "no-cors",
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
