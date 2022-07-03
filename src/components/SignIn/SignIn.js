@@ -19,6 +19,7 @@ class SignIn extends Component {
 
   onSubmitSignIn = () => {
     fetch("https://agile-ridge-97933.herokuapp.com/signin", {
+      mode: "no-cors",
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
