@@ -2,7 +2,7 @@
 
 ## 🚀 About Me
 
-NoFace is a responsive full stack face detection application.
+NoFace is a responsive full stack face detection application. NoFace will detect faces in any image URL provided to it.
 
 ## Screenshots
 
@@ -39,4 +39,4 @@ Start the server
 
 ## Credits
 
-The Complete Web Developer in 2022: Zero to Mastery [](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8803510?start=0#overview)
+[The Complete Web Developer in 2022: Zero to Mastery](https://www.udemy.com/course/the-complete-web-developer-zero-to-mastery/learn/lecture/8803510?start=0#overview)
